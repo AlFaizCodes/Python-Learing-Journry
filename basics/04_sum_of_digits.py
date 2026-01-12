@@ -1,8 +1,0 @@
-n = input()
-
-total = 0
-
-for c in n:
-    total += int(c)
-
-print(total)
