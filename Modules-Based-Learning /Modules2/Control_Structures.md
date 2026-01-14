@@ -19,18 +19,32 @@ Master conditional statements, loops, and decision-making in Python. Learn how t
 7. [Range Function](#7-range-function)
 8. [Loop Control Applications](#8-loop-control-applications)
 
-## 1. If-Elif-Else Statements
+26
+Statements
 
 **Concept:** Conditional statements allow you to execute different code blocks based on different conditions. If-elif-else statements provide multiple condition branches.
 
 ```python
-# code1
+x = int(input('Enter a number: '))
+if x > 0:
+    print('Positive number')
+elif x < 0:
+    print('Negative number')
+else:
+    print('Zero')
 
 
-# code2
+age = int(input('Enter age: '))
+if age >= 18:
+    if age < 60:
+        print('Adult')
+    else:
+        print('Senior')
+else:
+    print('Minor')
 
 
-# code3
+
 
 
 # code4
