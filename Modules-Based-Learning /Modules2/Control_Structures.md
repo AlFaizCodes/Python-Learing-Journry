@@ -15,10 +15,6 @@ Master conditional statements, loops, and decision-making in Python. Learn how t
 3. [While Loops](#3-while-loops)
 4. [Break and Continue](#4-break-and-continue)
 5. [Nested Loops](#5-nested-loops)
-6. [Loop Patterns](#6-loop-patterns)
-7. [Range Function](#7-range-function)
-8. [Loop Control Applications](#8-loop-control-applications)
-
 26
 Statements
 
