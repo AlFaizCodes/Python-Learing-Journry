@@ -1,4 +1,11 @@
+<img src="Bytexl.svg" width="140" align="left"/>
+
+<br clear="left"/>
+
 # Introduction to Data Structures
+
+## Python Learning Journey
+
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=2000&color=00D4FF&center=true&width=900&lines=%F0%9F%93%8B+Plan+%F0%9F%8F%97%EF%B8%8F+Build+%F0%9F%9A%80+Deploy+%F0%9F%92%8E+Bytexl" />
 
