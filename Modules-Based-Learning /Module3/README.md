@@ -23,11 +23,11 @@ This module provides a comprehensive introduction to fundamental data structures
 
 ---
 
-Yeh module Python mein data structures ko detail mein samajhata hai. Data structures fundamentals hain jo effective programming ke liye zaroori hain.
+
 
 ## 1. Lists (Ordered & Mutable)
 
-Lists Python ke most important data structures hain. Inme multiple elements rakh sakte ho aur unhe change kar sakte ho.
+
 
 ### Code Block 1: Basic List Operations
 
@@ -38,7 +38,7 @@ Lists Python ke most important data structures hain. Inme multiple elements rakh
 
 ## 2. Tuples (Ordered & Immutable)
 
-Tuples, lists ke jaisa hote hain lekin immutable hote hain. Ek baar create karne ke baad change nahi kar sakte.
+
 
 ### Code Block 2: Tuple Operations
 
@@ -49,7 +49,7 @@ Tuples, lists ke jaisa hote hain lekin immutable hote hain. Ek baar create karne
 
 ## 3. Sets (Unordered & Unique)
 
-Sets mein unique elements hote hain aur ye unordered hote hain. Duplicates automatically remove ho jaate hain.
+
 
 ### Code Block 3: Set Operations
 
@@ -60,7 +60,7 @@ Sets mein unique elements hote hain aur ye unordered hote hain. Duplicates autom
 
 ## 4. Dictionaries (Key-Value Pairs)
 
-Dictionaries mein data key-value pairs ke form mein store hota hai. Isse fast lookup possible hoti hai.
+
 
 ### Code Block 4: Dictionary Operations
 
@@ -71,7 +71,7 @@ Dictionaries mein data key-value pairs ke form mein store hota hai. Isse fast lo
 
 ## 5. Strings (Character Sequences)
 
-Strings characters ke sequences hote hain aur immutable hote hain. Text data ko represent karne ke liye use hote hain.
+
 
 ### Code Block 5: String Manipulation
 
@@ -82,7 +82,7 @@ Strings characters ke sequences hote hain aur immutable hote hain. Text data ko 
 
 ## 6. Nested Data Structures
 
-Complex data ko represent karne ke liye aap different data structures ko combine kar sakte ho (lists within dicts, etc.).
+
 
 ### Code Block 6: Working with Nested Structures
 
@@ -106,5 +106,6 @@ Complex data ko represent karne ke liye aap different data structures ko combine
 ## Learning Resources
 
 - Official Python Docs: https://docs.python.org/3/tutorial/datastructures.html
-- Practice examples aur assignments in code blocks above
-- Har code block mein apna code manually add karo
+- - Write and test practical examples for each data structure
+- Experiment with different operations and methods
+- Implement nested structures for real-world scenarios
