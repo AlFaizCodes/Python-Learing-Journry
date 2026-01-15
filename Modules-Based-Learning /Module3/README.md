@@ -1,5 +1,8 @@
 # Introduction to Data Structures
 
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=2000&color=00D4FF&center=true&width=900&lines=%F0%9F%93%8B+Plan+%F0%9F%8F%97%EF%B8%8F+Build+%F0%9F%9A%80+Deploy+%F0%9F%92%8E+Bytexl" />
+
+
 ## Overview
 
 This module provides a comprehensive introduction to fundamental data structures in Python. Data structures are essential building blocks of programming that allow you to organize, store, and manipulate data efficiently. Understanding different data structures and their properties is crucial for writing optimized and scalable code.
