@@ -29,10 +29,128 @@ This module provides a comprehensive introduction to fundamental data structures
 
 
 
-### Code Block 1: Basic List Operations
+### Code 1: List Operations
 
 ```python
-# Add your code here
+#Code1) 
+n = input()
+
+num_ = [int(x) for x in n.split()]
+
+largest = max(num_)
+
+print(largest)
+
+#2
+n = input().split()
+index = int(input())
+
+result = n[index]
+
+print(result)
+
+#3
+n = input().split()
+
+start, end = map(int, input().split())
+
+sublist = n[start:end]
+
+print(*(sublist))
+
+#4
+n = int(input())
+
+mylist = []
+
+for i in range(n):
+  item = input()
+  mylist.append(item)
+  
+removeelement = input()
+
+if removeelement in mylist:
+  mylist.remove(removeelement)
+
+
+mylist.sort()
+mylist.reverse()
+
+print(mylist)
+
+#5
+n = list(map(int, input().split()))
+
+m = int(input())
+newvalue= int(input())
+
+n[m] = newvalue
+
+print(*(n))
+
+#6
+temp = list(map(int, input().split()))
+
+anomalies = []
+
+for i in range(1, len(temp)):
+  if temp[i - 1] - temp[i] >= 5:
+    anomalies.append(temp[i])
+
+print(anomalies)
+
+#7
+prices = list(map(int, input().split()))
+
+peaks = []
+
+for i in range(1, len(prices) - 1):
+  if prices[i] > prices[i - 1] and prices[i] > prices[i + 1]:
+    peaks.append(i)
+
+print(peaks)
+
+#8 
+def is_prime(n):
+    if n < 2: return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0: return False
+    return True
+
+raw_data = list(map(int, input().split()))
+original_len = len(raw_data)
+
+cleaned_list = []
+if raw_data:
+    cleaned_list.append(raw_data[0])
+    for i in range(1, len(raw_data)):
+        if raw_data[i] != raw_data[i-1]:
+            cleaned_list.append(raw_data[i])
+
+extracted_list = []
+for idx in range(len(cleaned_list)):
+    if is_prime(idx):
+        extracted_list.append(cleaned_list[idx])
+
+final_processed = []
+for i in range(len(extracted_list)):
+    val = extracted_list[i]
+    if val < 0:
+        left = 0
+        right = 0
+        final_processed.append(0)
+    else:
+        final_processed.append(val)
+
+for i in range(0, len(final_processed), 2):
+    final_processed[i] *= original_len
+
+final_processed.reverse()
+
+if len(final_processed) > 0 and final_processed[0] == final_processed[-1]:
+    print(final_processed)
+else:
+    print("Corrupted Signal")
 
 ```
 
@@ -40,10 +158,103 @@ This module provides a comprehensive introduction to fundamental data structures
 
 
 
-### Code Block 2: Tuple Operations
+### Code2: Tuple Operations
 
 ```python
-# Add your code here
+#Code1)
+values = input().split()
+result = tuple(values)
+print(result)
+
+#Code2) 
+t = tuple(input().split())
+index = int(input())
+
+print(t[index])
+
+
+
+#Code3) 
+t1 = tuple(input().split())
+t2 = tuple(input().split())
+
+result = t1 + t2
+print(result)
+
+
+
+#Code4) 
+t = tuple(input().split())
+start = int(input())
+stop = int(input())
+
+print(t[start:stop])
+
+
+#Code5) 
+t = tuple(map(int, input().split()))
+x = int(input())
+
+lst = list(t)
+lst.append(x)
+t = tuple(lst)
+
+print(t)
+
+
+#Code6) 
+times = tuple(map(int, input().split()))
+
+result = []
+for t in times:
+    if 9 <= t <= 17:
+        result.append(t)
+
+print(tuple(result))
+
+
+
+#Code7) 
+temps = tuple(map(int, input().split()))
+result = []
+
+for i in range(len(temps) - 2):
+    if temps[i] > 35 and temps[i + 1] > 35 and temps[i + 2] > 35:
+        result.append((temps[i], temps[i + 1], temps[i + 2]))
+
+print(tuple(result))
+
+
+
+#Code8) 
+n = int(input())
+t = tuple(map(int, input().split()))
+
+prime_elements = []
+for i in range(2, len(t)):
+    is_prime = True
+    for j in range(2, int(i**0.5) + 1):
+        if i % j == 0:
+            is_prime = False
+            break
+    if is_prime:
+        prime_elements.append(t[i])
+prime_tuple = tuple(prime_elements)
+
+unique_elements = []
+for x in prime_tuple:
+    if x not in unique_elements:
+        unique_elements.append(x)
+unique_tuple = tuple(unique_elements)
+
+sum_unique = sum(unique_tuple)
+sliced_tuple = t[0::3]
+sum_sliced = sum(sliced_tuple)
+
+if sum_unique > sum_sliced:
+    print("Pattern Matched")
+else:
+    print("Pattern Mismatch")
 
 ```
 
@@ -51,10 +262,129 @@ This module provides a comprehensive introduction to fundamental data structures
 
 
 
-### Code Block 3: Set Operations
+### Code3: Set Operations
 
 ```python
-# Add your code here
+#Code1) 
+items = input().split()
+unique_items = list(dict.fromkeys(items))
+print("{" + ", ".join(unique_items) + "}")
+
+
+#Code2) 
+set1 = set(input().split())
+set2 = set(input().split())
+
+union_set = sorted(set1 | set2)
+intersection_set = sorted(set1 & set2)
+difference_set = sorted(set1 - set2)
+
+print("Union:", union_set)
+print("Intersection:", intersection_set)
+print("Difference (set1 - set2):", difference_set)
+
+
+#Code3)  
+nums = set(map(int, input().split()))
+print(min(nums))
+print(max(nums))
+
+
+#Code4) 
+words = set(input().split())
+vowels = set("aeiouAEIOU")
+
+count = 0
+for word in words:
+    for ch in word:
+        if ch in vowels:
+            count += 1
+
+print(count)
+
+
+#Code5) 
+s = list(map(int, input().split()))
+x = int(input())
+
+if x in s:
+    s.remove(x)
+
+s = sorted(s)
+print("{" + ", ".join(map(str, s)) + "}")
+
+
+#Code6) 
+total = set(input().split())
+assigned = set(input().split())
+new_req = set(input().split())
+
+available = total - assigned
+assigned |= (new_req & available)
+
+print(sorted(assigned))
+
+
+#Code7) 
+emails = input().split()
+blocked = set(input().split())
+
+result = set()
+for email in emails:
+    domain = email.split("@")[1]
+    if domain not in blocked:
+        result.add(email)
+
+print(result)
+
+
+#Code8) 
+n = int(input())
+books = {}
+for _ in range(n):
+    isbn, genre = input().split()
+    books[isbn] = genre
+
+m = int(input())
+student_genres = {}
+for _ in range(m):
+    student, isbn = input().split()
+    student_genres.setdefault(student, set()).add(books[isbn])
+    print(f"Book {isbn} borrowed.")
+
+borrowed_now = {}
+available = set(books.keys())
+
+q = int(input())
+for _ in range(q):
+    data = input().split()
+
+    if data[0] == "borrow":
+        student, isbn = data[1], data[2]
+        if isbn not in available:
+            print(f"Book {isbn} not available.")
+        elif books[isbn] in student_genres.get(student, set()):
+            print(f"Student already has a book from genre {books[isbn]}.")
+        else:
+            available.remove(isbn)
+            borrowed_now.setdefault(student, set()).add(isbn)
+            student_genres.setdefault(student, set()).add(books[isbn])
+            print(f"Book {isbn} borrowed.")
+
+    elif data[0] == "return":
+        student, isbn = data[1], data[2]
+        if isbn in borrowed_now.get(student, set()):
+            borrowed_now[student].remove(isbn)
+            available.add(isbn)
+            print(f"Book {isbn} returned.")
+        else:
+            print(f"Book {isbn} not found in borrowed list.")
+
+    elif data[0] == "suggest":
+        student = data[1]
+        genres = student_genres.get(student, set())
+        s = {i for i in available if books[i] in genres}
+        print(f"Suggested books for {student}: {s}")
 
 ```
 
@@ -62,32 +392,309 @@ This module provides a comprehensive introduction to fundamental data structures
 
 
 
-### Code Block 4: Dictionary Operations
+### Code4: Dictionary Operations
 
 ```python
-# Add your code here
+#Code1) 
+keys = input().split()
+values = input().split()
+
+d = dict(zip(keys, values))
+print(d)
+
+
+#Code2) 
+n = int(input())
+d = {}
+for _ in range(n):
+    key = input()
+    value = input()
+    d[key] = value
+
+print(d.get('computers', "Key 'computers' not found"))
+
+
+#Code3) 
+n = int(input())
+original = {}
+for _ in range(n):
+    key = input()
+    value = input()
+    original[key] = value
+
+extract_keys = input().split()
+new_dict = {k: original[k] for k in extract_keys if k in original}
+
+print(new_dict)
+
+
+#Code4) 
+n = int(input())
+d = {}
+for _ in range(n):
+    key = input()
+    value = input()
+    d[key] = value
+
+get_key = input()
+print(d.get(get_key, "Key not found"))
+
+update_key = input()
+update_value = input()
+d.update({update_key: update_value})
+
+pop_key = input()
+d.pop(pop_key, None)
+
+d_copy = d.copy()
+print(d_copy)
+
+d.clear()
+print(d)
+
+
+#Code5) 
+n = int(input())
+d = {}
+
+for _ in range(n):
+    key = input()
+    value = input()
+    d[key] = value
+
+for k, v in d.items():
+    print(f"The value for {k} is {v}")
+
+
+#Code6) 
+records = input().split()
+sales = {}
+
+for record in records:
+    title, count = record.split(":")
+    count = int(count)
+    sales[title] = sales.get(title, 0) + count
+
+print(sales)
+
+
+#Code7) 
+names = input().split()
+scores = list(map(int, input().split()))
+
+result = {}
+for name, score in zip(names, scores):
+    if score >= 50:
+        result[name] = score
+
+print(result)
+
+
+#Code8) 
+n = int(input())
+D = {}
+
+for _ in range(n):
+    k, v = input().split()
+    D[k] = int(v)
+
+for k, v in list(D.items()):
+    if len(k) % 2 != 0 or v <= 0:
+        D.pop(k)
+
+vowels = "aeiou"
+for k, v in list(D.items()):
+    rev = k[::-1]
+    new_key = ""
+    for ch in rev:
+        if ch in vowels:
+            new_key += ch.upper()
+        else:
+            new_key += ch
+    if v % 2 == 0:
+        new_val = bin(v)[2:]
+    else:
+        new_val = oct(v)[2:]
+    D.pop(k)
+    D[new_key] = new_val
+
+keys = sorted(D.keys())
+print(keys[0] + keys[-1])
 
 ```
 
-## 5. Strings (Character Sequences)
+## 5. List Comprehensions
 
 
 
-### Code Block 5: String Manipulation
-
+### Code5: Comprehensions
 ```python
-# Add your code here
+#Code1)  
+nums = list(map(int, input().split()))
+evens = [x for x in nums if x % 2 == 0]
+print(evens)
+
+
+#Code2) 
+n = int(input())
+print(sum(i*i for i in range(1, n + 1)))
+
+
+#Code3) 
+d = eval(input())
+inverted = {v: k for k, v in d.items()}
+print(inverted)
+
+
+#Code4) 
+nested = eval(input())
+flat = [item for sublist in nested for item in sublist]
+print(flat)
+
+
+#Code5) 
+n = int(input())
+result = [(i, j) for i in range(1, n + 1) for j in range(1, n + 1)]
+print(result)
+
+
+#Code6) 
+names = input().split()
+prices = list(map(float, input().split()))
+discounted = {names[i]: round(prices[i] * 0.9, 2) for i in range(len(names)) if prices[i] > 1000}
+print(discounted)
+
+
+#Code7) 
+nums = list(map(int, input().split()))
+result = [n*n for n in nums if n % 2 == 0 and str(n*n) == str(n*n)[::-1]]
+print(result)
+
+
+#Code8) 
+n = int(input())
+nums = list(map(int, input().split()))
+
+def digit_sum_even(x):
+    return sum(map(int, str(abs(x)))) % 2 == 0
+
+result = []
+mapping = {}
+
+for x in nums:
+    if x % 3 == 0 or digit_sum_even(x):
+        if x % 2 == 0:
+            t = x * x
+        else:
+            t = x * x * x
+        mapping[x] = t
+
+for v in mapping.values():
+    if v >= 0 and int(v ** 0.5) ** 2 == v:
+        result.append(v)
+
+print(*result)
 
 ```
 
-## 6. Nested Data Structures
+## 6. Strings
 
 
 
-### Code Block 6: Working with Nested Structures
+### Code Block 6: Working with Strings
 
 ```python
-# Add your code here
+#Code1) 
+s = input()
+print(len(s))
+
+
+#Code2) 
+s1 = input()
+s2 = input()
+s = s1 + s2
+print(s)
+print(s[:5])
+
+
+#Code3) 
+s = input()
+print(s[::-1])
+
+
+#Code4) 
+s = input()
+w = int(input())
+try:
+    fill = input()
+    if fill == "":
+        fill = "#"
+except:
+    fill = "#"
+
+print(s.center(w, fill))
+
+
+#Code5) 
+a = input()
+b = input()
+s = input()
+table = str.maketrans(a, b)
+print(s.translate(table))
+
+
+
+#Code6) 
+emails = input().split()
+cleaned = [e.strip().lower() for e in emails]
+sorted_emails = sorted(cleaned, key=lambda x: x.split('@')[1])
+print(sorted_emails)
+
+
+#Code7) 
+s = input().lower()
+for ch in ".,!?;:":
+    s = s.replace(ch, "")
+words = s.split()
+
+freq = {}
+for w in words:
+    freq[w] = freq.get(w, 0) + 1
+
+for w, c in sorted(freq.items(), key=lambda x: (-x[1], x[0])):
+    print(f"{w}:{c}")
+
+
+#Code8) 
+s = input()
+
+letters = []
+digits = []
+
+for ch in s:
+    if ch.isalpha():
+        if ch.lower() in "aeiou":
+            letters.append(ch.upper())
+        else:
+            letters.append(ch.lower())
+    else:
+        digits.append(ch)
+
+digits = [str(9 - int(d)) for d in digits[::-1]]
+
+i = j = 0
+res = []
+
+while i < len(letters) and j < len(digits):
+    res.append(letters[i])
+    res.append(digits[j])
+    i += 1
+    j += 1
+
+res.extend(letters[i:])
+res.extend(digits[j:])
+
+print("".join(res))
 
 ```
 
