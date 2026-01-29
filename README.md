@@ -14,7 +14,7 @@
 
 ---
 
-## 📖 Table of Contents
+## 📖 Table of Contents,
 - [Introduction](#introduction)
 - [Understanding Patterns](#understanding-patterns)
 - [Star Patterns](#star-patterns)
