@@ -1,6 +1,6 @@
 a = int(input())
 
-if a % 2 == 0:
-  print("The number is even.")
+if a % 5 == 0:
+  print("Divisible by 5")
 else:
-  print("The number is odd.")
+  print("Not Divisible by 5")
