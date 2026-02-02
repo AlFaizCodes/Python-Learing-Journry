@@ -30,125 +30,100 @@ Statements
 **Concept:** Conditional statements allow you to execute different code blocks based on different conditions. If-elif-else statements provide multiple condition branches.
 
 ```python
-#Code1)
-nums = list(map(int, input().split()))
-target = int(input())
+a = int(input())
 
-found = False
-
-for i in range(len(nums)):
-    if nums[i] == target:
-        print(f"Number found at index {i}")
-        found = True
-        break
-
-if not found:
-    print("Number not found")
-
-#Code2) 
-n = int(input())
-
-for i in range(1, n + 1):
-    if i % 2 == 0:
-        continue
-    print(i, end=" ")
-
-#Code3)
-n = int(input())
-m = int(input())
-
-for i in range(n, m + 1):
-    if i == 3:
-        print("Skip 3!")
-        pass
-    else:
-        print(i)
-
-#Code4)
-n, m = map(int, input().split())
-
-for i in range(n, m + 1):
-    if i == 3:
-        print("Skipping number 3!")
-        pass
-    else:
-        print(i)
-
-#Code5) 
-n = int(input())
-
-result = []
-
-for i in range(1, n + 1):
-    if i > 10:
-        break
-    if i % 2 == 0:
-        continue
-    result.append(str(i))
-
-print(" ".join(result))
-
-#Code6) 
-n = int(input())
-
-total = 0
-
-for i in range(1, n + 1):
-    if i % 2 == 0:
-        continue
-    total += i
-
-print(total)
-
-#Code7) 
-count = 0
-
-while True:
-    n = int(input())
-    if n == 0:
-        break
-    if n <= 0:
-        pass
-    else:
-        count += 1
-
-print(count)
+if a > 0:
+  print("The number is positive.")
 
 
-#Code8) 
-n, k = map(int, input().split())
-commands = [input().strip() for _ in range(n)]
+#2
+a = int(input())
 
-escaped = False
-i = 0
-
-while i < n:
-    cmd = commands[i]
-
-    if cmd == "MOVE":
-        i += 1
-        continue
-
-    elif cmd == "JUMP":
-        i += k + 1
-        continue
-
-    elif cmd == "IGNORE":
-        pass
-
-    elif cmd == "BLOCK":
-        break
-
-    elif cmd == "END":
-        escaped = True
-        break
-
-    i += 1
-
-if escaped:
-    print("ESCAPED")
+if a % 5 == 0:
+  print("Divisible by 5")
 else:
-    print("TRAPPED")
+  print("Not Divisible by 5")
+  
+#3
+a = int(input())
+
+if a % 2 == 0:
+  print("The number is even.")
+else:
+  print("The number is odd.")
+  
+#4
+a = int(input())
+
+if a > 0:
+  print("The number is positive.")
+elif a < 0:
+  print("The number is negative.")
+else:
+  print("The number is zero.")
+
+#5
+a = input()
+
+if a == "Red":
+  print("Stop")
+elif a == "Yellow":
+  print("Ready")
+elif a == "Green":
+  print("Go")
+else:
+  print("Invalid color")
+
+#6
+a = int(input())
+
+if a < 13:
+  print("Child")
+elif a <= 19:
+  print("Teenager")
+elif a <= 64:
+  print("Adult")
+else:
+  print("Senior")
+
+#7
+a = input().split()
+
+x = int(a[0])
+y = int(a[1])
+z = int(a[2])
+
+if x == y == z:
+  print("Equal")
+elif x == y or y == z or z == x:
+  print("Two equal")
+else:
+  print("All different")
+
+#8 
+security_clearance, biometric_score, access_code = map(int, input().split())
+
+secur_ok = False
+
+if biometric_score > 85:
+  if security_clearance >= 5:
+    secur_ok = True
+elif 60 <= biometric_score <= 85:
+  if security_clearance >= 7:
+    secur_ok = True
+else:
+  if security_clearance == 10:
+    secur_ok = True
+
+code_str = str(access_code)
+digit_sum = sum(int(d) for d in code_str)
+
+code_ok = (access_code % 2 == 0) and (digit_sum % 5 == 0)
+
+if secur_ok and code_ok:
+  print("Access Granted")
+else:
+  print("Access Denied")
 
 ```
 
