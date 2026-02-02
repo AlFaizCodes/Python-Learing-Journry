@@ -1,7 +1,8 @@
-n, m = map(int, input().split())
-for i in range(n, m + 1):
-    if i == 3:
-        print("Skipping number 3!")
-        pass
-    else:
-        print(i)
+a = int(input())
+
+if a > 0:
+  print("The number is positive.")
+elif a < 0:
+  print("The number is negative.")
+else:
+  print("The number is zero.")
